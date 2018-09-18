@@ -32,16 +32,19 @@ public class SieveEratosthenes {
 
     }
 
+    //Method to compute the primes
     public void compute(int input) throws IOException {
 
         Long startTime = System.currentTimeMillis();
         BitSet primes = new BitSet(input + 1);
         int counter = 1;
-        for (int i = 0; i <= input; i++) {
+        //Set all values to true
+        for (int i = 0; i < input; i++) {
             primes.set(i);
         }
 
         for (int p = 2; p * p <= input; p++) {
+            //If the value at p is true then turn all multiples of p to false
             if (primes.get(p)) {
                 for (int j = p * 2; j <= input; j += p ) {
                     primes.set(j, false);
@@ -50,6 +53,7 @@ public class SieveEratosthenes {
         }
         long endTime = System.currentTimeMillis();
 
+        //Add the primes to the output file
         for (int t = 2; t <= input; t++) {
             if (primes.get(t)) {
                 index = String.valueOf(t);

@@ -60,6 +60,7 @@ public class SieveSundaram {
             writer.append(' ');
             writer.close();
             System.out.print("2\t");
+            counter++;
 
         // Add all indexes with true value to the file
         for (int i = 1; i <= setSize; i++) {
