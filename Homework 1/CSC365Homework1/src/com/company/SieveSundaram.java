@@ -47,7 +47,7 @@ public class SieveSundaram {
         //This is the main logic of the Sieve
         //Set all values of index of (i+j+2*i*j) to true
         for (int i = 1; i <= setSize; i++) {
-            for (int j = i; (i + j + 2 * i * j) <= setSize; j++) {
+            for (int j = i; j <= (setSize)/(2*i*1); j++) {
                 primes.set(i + j + 2 * i * j);
             }
         }
