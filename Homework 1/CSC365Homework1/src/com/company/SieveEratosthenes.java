@@ -53,18 +53,19 @@ public class SieveEratosthenes {
         }
         long endTime = System.currentTimeMillis();
 
+        long fileStartTime = System.currentTimeMillis();
         //Add the primes to the output file
         for (int t = 2; t <= input; t++) {
             if (primes.get(t)) {
                 index = String.valueOf(t);
                 writer = new BufferedWriter(new FileWriter(output, true));
                 writer.append(index);
-                System.out.println(t);
-                System.out.println(" ");
+                System.out.print(t);
+                System.out.print(" ");
 
                 if (counter % 9 == 0) {
                     writer.append("\n");
-                    System.out.println("\n");
+                    System.out.print("\n");
                 } else {
                     writer.append(' ');
                 }
@@ -73,11 +74,15 @@ public class SieveEratosthenes {
 
             }
         }
+        long fileEndTime = System.currentTimeMillis();
+        long fileTime = fileEndTime - fileStartTime;
         String time = String.valueOf((endTime - startTime));
         writer = new BufferedWriter(new FileWriter(output, true));
         writer.append("\n");
         writer.append("The Sieve of Eratosthenes took " + time + " milliseconds");
         writer.close();
+        System.out.println("The Sieve of Eratosthenes took " + time + " milliseconds");
+        System.out.println("The Sieve of Eratosthenes' output took " + fileTime + " milliseconds");
     }
 
 }

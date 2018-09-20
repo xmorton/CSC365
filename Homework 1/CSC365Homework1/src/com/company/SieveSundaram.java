@@ -47,7 +47,7 @@ public class SieveSundaram {
         //This is the main logic of the Sieve
         //Set all values of index of (i+j+2*i*j) to true
         for (int i = 1; i <= setSize; i++) {
-            for (int j = i; j <= (setSize)/(2*i*1); j++) {
+            for (int j = i; j <= (setSize)/(2*i+1); j++) {
                 primes.set(i + j + 2 * i * j);
             }
         }
@@ -62,6 +62,7 @@ public class SieveSundaram {
             System.out.print("2\t");
             counter++;
 
+        long fileStartTime = System.currentTimeMillis();
         // Add all indexes with true value to the file
         for (int i = 1; i <= setSize; i++) {
             if (!primes.get(i)) {
@@ -70,11 +71,11 @@ public class SieveSundaram {
                 writer = new BufferedWriter(new FileWriter(output, true));
                 writer.append(index);
                 System.out.print((2 * i + 1));
-                System.out.println(' ');
+                System.out.print(' ');
 
                 if (counter % 9 == 0) {
                     writer.append("\n");
-                    System.out.println("\n");
+                    System.out.print("\n");
                 } else {
                     writer.append(' ');
                 }
@@ -83,11 +84,15 @@ public class SieveSundaram {
 
             }
         }
+        long fileEndTime = System.currentTimeMillis();
+        long fileTime = fileEndTime - fileStartTime;
         String time = String.valueOf((timeEnd - startTime));
         writer = new BufferedWriter(new FileWriter(output, true));
         writer.append("\n");
         writer.append("The Sieve of Sundaram took " + time + " milliseconds");
         writer.close();
+        System.out.println("The Sieve of Sundaram took " + time + " milliseconds");
+        System.out.println("The Sieve of Sundaram's output took " + fileTime + " milliseconds");
     }
 
 }
