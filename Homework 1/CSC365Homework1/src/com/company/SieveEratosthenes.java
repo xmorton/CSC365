@@ -81,7 +81,7 @@ public class SieveEratosthenes {
         writer.append("\n");
         writer.append("The Sieve of Eratosthenes took " + time + " milliseconds");
         writer.close();
-        System.out.println("The Sieve of Eratosthenes took " + time + " milliseconds");
+        System.out.println("\nThe Sieve of Eratosthenes took " + time + " milliseconds");
         System.out.println("The Sieve of Eratosthenes' output took " + fileTime + " milliseconds");
     }
 
