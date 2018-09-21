@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="903440ba-bdad-4c63-9d0f-69468a7c0032" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CSC365Homework1/src/com/company/SieveEratosthenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC365Homework1/src/com/company/SieveEratosthenes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSC365Homework1/src/com/company/SieveSundaram.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSC365Homework1/src/com/company/SieveSundaram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC365Homework1.zip" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSC365Homework1/src/com/company/SieveEratosthenes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
+            <state relative-caret-position="1109">
+              <caret line="67" column="43" lean-forward="true" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CSC365Homework1/src/com/company/SieveSundaram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
+            <state relative-caret-position="678">
               <caret line="93" column="30" lean-forward="true" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -196,7 +195,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1488" height="878" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49718574" visible="true" weight="0.14845939" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49718574" visible="true" weight="0.14845939" />
       <window_info id="Structure" order="1" sideWeight="0.50281423" side_tool="true" visible="true" weight="0.14845939" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -205,7 +204,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.54901963" visible="true" weight="0.28456375" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.54901963" visible="true" weight="0.28456375" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49719888" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -271,20 +270,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSC365Homework1/src/com/company/SieveSundaram.java">
+    <entry file="file://$PROJECT_DIR$/CSC365Homework1/src/com/company/SieveEratosthenes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="93" column="30" lean-forward="true" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
+        <state relative-caret-position="1109">
+          <caret line="67" column="43" lean-forward="true" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CSC365Homework1/src/com/company/SieveEratosthenes.java">
+    <entry file="file://$PROJECT_DIR$/CSC365Homework1/src/com/company/SieveSundaram.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
+        <state relative-caret-position="678">
+          <caret line="93" column="30" lean-forward="true" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
