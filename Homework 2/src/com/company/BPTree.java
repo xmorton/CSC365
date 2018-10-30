@@ -24,7 +24,8 @@ public class BPTree {
         root = new LeafNode();
     }
 
-    //Inserting an element into the tree
+    /*Inserting an element into the tree.
+    * The tree takes the patent id as well as the index of the first row of the double array that the scan id is stored in.*/
     public void insert(int key, int value) {
         System.out.println("inserting key = " + key);
         Split result = root.insert(key, value);
@@ -38,7 +39,9 @@ public class BPTree {
         }
     }
 
-    //Looking through the tree for a element that may be in the tree
+    /*Looking through the tree for a element that may be in the tree.
+    * Takes the patent id that serves as the key and returns the index of where the scan id is stored in the double
+    * array. The method returns -1 if the key is not in the tree*/
     public int search(int key) {
         Node node = root;
         while (node instanceof BPTree.InterNode) {
@@ -49,8 +52,9 @@ public class BPTree {
 
         LeafNode leaf = (LeafNode) node;
         int index = leaf.getLocation(key);
-        if(index < leaf.numKey && leaf.keys[index] == key)
+        if(index < leaf.numKey && leaf.keys[index] == key) {
             return leaf.values[index];
+        }
         return -1;
     }
 
