@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="903440ba-bdad-4c63-9d0f-69468a7c0032" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework 2/out/production/Homework 2/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 2/out/production/Homework 2/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework 2/out/production/Homework 2/com/company/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 2/out/production/Homework 2/com/company/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 2/src/com/company/BPTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 2/src/com/company/BPTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework 2/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 2/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework 2/src/com/company/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 2/src/com/company/input.txt" afterDir="false" />
     </list>
@@ -111,11 +109,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1974" />
-    <option name="y" value="-318" />
-    <option name="width" value="1874" />
-    <option name="height" value="1096" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1860" />
+    <option name="height" value="1098" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -200,10 +198,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1974" y="-318" width="1874" height="1096" extended-state="6" />
+    <frame x="-7" y="-7" width="1488" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49718574" visible="true" weight="0.1185226" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49718574" visible="true" weight="0.15056023" />
       <window_info id="Structure" order="1" sideWeight="0.50281423" side_tool="true" weight="0.14845939" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />

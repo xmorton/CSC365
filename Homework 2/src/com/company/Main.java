@@ -26,6 +26,7 @@ public class Main {
         makeInput(isize, inputFile);
         storage = new String[isize][isize];
         storage = popTree(storage, inputFile);
+        bTree.print();
         while (!cmd.equals("yes")) {
             System.out.println("Enter patent Id");
             patentId = scan.nextInt();
