@@ -1,10 +1,8 @@
 package com.company;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
+import javax.swing.*;
 
 public class Main {
 
@@ -22,7 +20,7 @@ public class Main {
         Node start = new Node("Start");
         Graph graph = new Graph();
         graph.addNode(start);
-        Set<Node> nodes = new HashSet<>();
+        Set<Node> nodes;
         while ((line = bufferedReader.readLine()) != null) {
             input = line.split(" ");
             nodeStart = new Node(input[0] + " Start");
@@ -42,15 +40,15 @@ public class Main {
             }
             nodeStart.addDestination(nodeEnd, -weight);
             start.addDestination(nodeStart, 0.0);
-            System.out.println(graph.containsNode(input[0] + " Start"));
-            System.out.println(graph.containsNode(input[0] + " End"));
+            //System.out.println(graph.containsNode(input[0] + " Start"));
+            //System.out.println(graph.containsNode(input[0] + " End"));
             for (int i = 2; i < input.length; i++) {
                 if (graph.containsNode(input[i] + " Start")) {
-                    System.out.println("Prerec already exists");
+                    //System.out.println("Prerec already exists");
                     postnode = graph.getNode(input[i] + " Start");
                     nodeEnd.addDestination(postnode, 0.0);
                 } else {
-                    System.out.println("Prerec does not exist ");
+                    //System.out.println("Prerec does not exist ");
                     postnode = new Node(input[i] + " Start");
                     nodeEnd.addDestination(postnode, 0.0);
                     graph.addNode(postnode);
@@ -60,83 +58,45 @@ public class Main {
         }
         graph = Dijkstra.calculateShortestPathFromSource(graph, start);
         nodes = graph.getNodes();
+        Node[] nodeArray = nodes.toArray(new Node[nodes.size()]);
+        int coreCount = graph.getCoreCount();
+        int startCount = graph.getStartCount() + 1;
+        int jobStartCount = 0;
+        double[] startTimes = graph.getStartTimes(startCount);
+        double longestCount = graph.getLongestCount();
+        for (int y = 0; y < startTimes.length; y++) {
+            if (startTimes[y] == Double.MAX_VALUE) {
+                startTimes[y] = longestCount;
+                jobStartCount = y + 1;
+                Arrays.sort(startTimes);
 
-        Scanner scan = new Scanner(System.in);
-        String cmd = null;
-        System.out.println("Enter node or say q");
-        cmd = scan.nextLine();
-        while (!cmd.equals("q")) {
-            if (graph.containsNode(cmd)) {
-                System.out.println("Graph contains the node " + cmd + " and the distance is " + graph.getNode(cmd).getDistance());
-            } else {
-                System.out.println("Graph does not contain the node " + cmd);
+                System.out.println(startTimes[y]);
+                break;
             }
-            Node look = graph.getNode(cmd);
-            look.printAdjacent();
-            System.out.println("Enter node or say q");
-            cmd = scan.nextLine();
+            System.out.println(startTimes[y]);
         }
-        /*
-        Scanner scan = new Scanner(System.in);
-        String cmd = null;
-        Node nodeA = new Node("A");
-        Node nodeB = new Node("B");
-        Node nodeC = new Node("C");
-        Node nodeD = new Node("D");
-        Node nodeE = new Node("E");
-        Node nodeF = new Node("F");
-
-        nodeA.addDestination(nodeB, 10);
-        nodeA.addDestination(nodeC, 15);
-
-        nodeB.addDestination(nodeD, 12);
-        nodeB.addDestination(nodeF, 15);
-
-        nodeC.addDestination(nodeE, 10);
-
-        nodeD.addDestination(nodeE, 2);
-        nodeD.addDestination(nodeF, 1);
-
-        nodeF.addDestination(nodeE, 5);
-
-
-
-        graph.addNode(nodeA);
-        graph.addNode(nodeB);
-        graph.addNode(nodeC);
-        graph.addNode(nodeD);
-        graph.addNode(nodeE);
-        graph.addNode(nodeF);
-
-        graph = Dijkstra.calculateShortestPathFromSource(graph, nodeA);
-
-        System.out.println("Enter node or say q");
-        cmd = scan.next();
-        while (!cmd.equals("q")) {
-            if (cmd.equals("A")) {
-                if (graph.containsNode("A"))
-                System.out.println("This node's shortest path is " + nodeA.getDistance());
-            } else if (cmd.equals("B")) {
-                if (graph.containsNode("B"))
-                System.out.println("This node's shortest path is " + nodeB.getDistance());
-            } else if (cmd.equals("C")) {
-                if (graph.containsNode("C"))
-                System.out.println("This node's shortest path is " + nodeC.getDistance());
-            } else if (cmd.equals("D")) {
-                if (graph.containsNode("D"))
-                System.out.println("This node's shortest path is " + nodeD.getDistance());
-            } else if (cmd.equals("E")) {
-                if (graph.containsNode(""))
-                System.out.println("This node's shortest path is " + nodeE.getDistance());
-            } else if (cmd.equals("F")) {
-                if (graph.containsNode("F"))
-                System.out.println("This node's shortest path is " + nodeF.getDistance());
+        int realStartCount = jobStartCount;
+        graph.setAllCores(coreCount);
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createAndShowGUI(coreCount, realStartCount, startTimes, nodeArray);
             }
-            System.out.println("Enter node or say q");
-            cmd = scan.next();
-        }
-        */
+        });
 
+    }
+    private static void createAndShowGUI(int coreCount, int startCount, double[] startTimes, Node[] nodeArray) {
+        //Create and set up the window.
+        JFrame frame = new JFrame("SimpleTableDemo");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //Create and set up the content pane.
+        MyTable newContentPane = new MyTable(coreCount, startCount, startTimes, nodeArray);
+        newContentPane.setOpaque(true); //content panes must be opaque
+        frame.setContentPane(newContentPane);
+
+        //Display the window.
+        frame.pack();
+        frame.setVisible(true);
     }
 
 

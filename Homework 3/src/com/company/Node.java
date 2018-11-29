@@ -6,6 +6,8 @@ public class Node {
 
     private String name;
 
+    private int core;
+
     private LinkedList<Node> shortestPath = new LinkedList<>();
 
     private Double distance = Double.MAX_VALUE;
@@ -14,6 +16,7 @@ public class Node {
 
     public Node(String name) {
         this.name = name;
+        core = -2;
     }
 
     public void addDestination(Node destination, double distance) {
@@ -24,17 +27,19 @@ public class Node {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCore(int coreNumber) {
+        core = coreNumber;
     }
+
+    public int getCore() {
+        return core;
+    }
+
 
     public Map<Node, Double> getAdjacentNodes() {
         return adjacentNodes;
     }
 
-    public void setAdjacentNodes(Map<Node, Double> adjacentNodes) {
-        this.adjacentNodes = adjacentNodes;
-    }
 
     public Double getDistance() {
         return distance;
