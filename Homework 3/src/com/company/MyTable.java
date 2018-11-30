@@ -14,7 +14,7 @@ public class MyTable extends JPanel {
         data = new Object[startCount][columnNames.length];
         String label = "Start Times";
         columnNames[0] = label;
-        System.out.println(startCount);
+        //System.out.println(startCount);
         for (int i = 1; i < columnNames.length; i++) {
             columnNames[i] = "Core " + (i - 1);
         }

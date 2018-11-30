@@ -14,11 +14,15 @@ public class Node {
 
     private Map<Node, Double> adjacentNodes = new HashMap<>();
 
+    private boolean checked = false;
+
+    //node constructor
     public Node(String name) {
         this.name = name;
         core = -2;
     }
 
+    //adds an edge to a specified node
     public void addDestination(Node destination, double distance) {
         adjacentNodes.put(destination, distance);
     }
@@ -27,13 +31,29 @@ public class Node {
         return name;
     }
 
-    public void setCore(int coreNumber) {
-        core = coreNumber;
+    //sets the core that the job will be ran in
+    public void setCore(int coreNumber, int numberCore) {
+        //If the core number that is being set is greater than the number of possible cores, do not set the core
+        if (coreNumber <= numberCore) {
+            core = coreNumber;
+        } else {
+            core = -2;
+        }
     }
 
     public int getCore() {
         return core;
     }
+
+
+    public void setChecked (boolean check) {
+        checked = check;
+    }
+
+    public boolean getChecked() {
+        return checked;
+    }
+
 
 
     public Map<Node, Double> getAdjacentNodes() {
@@ -53,16 +73,9 @@ public class Node {
         return shortestPath;
     }
 
+    //This is only used during the Dijkstra calculation.
     public void setShortestPath(LinkedList<Node> shortestPath) {
         this.shortestPath = shortestPath;
     }
 
-    public void printAdjacent() {
-        //System.out.println(Arrays.asList(adjacentNodes));
-        Set<Node>print = adjacentNodes.keySet();
-        Node[] nodeArray = print.toArray(new Node[print.size()]);
-        for (int i = 0; i < nodeArray.length; i++) {
-            System.out.println(nodeArray[i].getName() + " " + adjacentNodes.get(nodeArray[i]));
-        }
-    }
 }

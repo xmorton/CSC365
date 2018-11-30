@@ -23,10 +23,13 @@ public class Main {
         Set<Node> nodes;
         while ((line = bufferedReader.readLine()) != null) {
             input = line.split(" ");
+            //Makes both the start and end node for each job in the file
             nodeStart = new Node(input[0] + " Start");
             nodeEnd = new Node(input[0] + " End");
+            //Gets the weight for the job, then turns that weight into a double
             stringWeight = input[1];
             weight = Double.parseDouble(stringWeight);
+            //Checks if the start or end node already exist in the graph, if so gets that node from the graph, if not adds the node.
             if (!graph.containsNode(nodeStart.getName())) {
                 graph.addNode(nodeStart);
             } else {
@@ -38,17 +41,15 @@ public class Main {
             } else {
                 nodeEnd = graph.getNode(nodeEnd.getName());
             }
+            //adds the edge from the start node to the end nod with a negated weight.
             nodeStart.addDestination(nodeEnd, -weight);
+            //adds the edge from the overall start node to the current job start node.
             start.addDestination(nodeStart, 0.0);
-            //System.out.println(graph.containsNode(input[0] + " Start"));
-            //System.out.println(graph.containsNode(input[0] + " End"));
             for (int i = 2; i < input.length; i++) {
                 if (graph.containsNode(input[i] + " Start")) {
-                    //System.out.println("Prerec already exists");
                     postnode = graph.getNode(input[i] + " Start");
                     nodeEnd.addDestination(postnode, 0.0);
                 } else {
-                    //System.out.println("Prerec does not exist ");
                     postnode = new Node(input[i] + " Start");
                     nodeEnd.addDestination(postnode, 0.0);
                     graph.addNode(postnode);
@@ -56,27 +57,30 @@ public class Main {
             }
 
         }
+        //computes the longest path, which is technically the shortest because all of the weights are negated
         graph = Dijkstra.calculateShortestPathFromSource(graph, start);
         nodes = graph.getNodes();
         Node[] nodeArray = nodes.toArray(new Node[nodes.size()]);
         int coreCount = graph.getCoreCount();
         int startCount = graph.getStartCount() + 1;
         int jobStartCount = 0;
+        //Get all the times when a job starts and turns it into an array named startTimes
         double[] startTimes = graph.getStartTimes(startCount);
+        //Gets the longest time, this is the time when all jobs are done.
         double longestCount = graph.getLongestCount();
+        //Adds the longest time to the startTimes array
         for (int y = 0; y < startTimes.length; y++) {
             if (startTimes[y] == Double.MAX_VALUE) {
                 startTimes[y] = longestCount;
                 jobStartCount = y + 1;
                 Arrays.sort(startTimes);
-
-                System.out.println(startTimes[y]);
                 break;
             }
-            System.out.println(startTimes[y]);
         }
+        //This is the number of start times plus the end time.
         int realStartCount = jobStartCount;
-        graph.setAllCores(coreCount);
+        //Sets the core that the job will be ran in.
+        graph.setAllCores(coreCount, startTimes, realStartCount);
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 createAndShowGUI(coreCount, realStartCount, startTimes, nodeArray);
@@ -84,6 +88,11 @@ public class Main {
         });
 
     }
+
+    /*
+    Creates and shows the table. Takes the number of needed cores, the number of start times, the start times themselves,
+    and the nodes of the graph
+     */
     private static void createAndShowGUI(int coreCount, int startCount, double[] startTimes, Node[] nodeArray) {
         //Create and set up the window.
         JFrame frame = new JFrame("SimpleTableDemo");

@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6668e83-c6d7-4e1c-aebd-e5feb76b7181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Homework 3/src/com/company/MyTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework 3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Dijkstra.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Dijkstra.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Main$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/MyTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/MyTable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 3/src/com/company/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/src/com/company/Dijkstra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework 3/src/com/company/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/src/com/company/Graph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework 3/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 3/src/com/company/MyTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/src/com/company/MyTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework 3/src/com/company/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/src/com/company/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 3/src/com/company/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/src/com/company/input.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +30,8 @@
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -59,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="175" column="25" lean-forward="true" selection-start-line="175" selection-start-column="25" selection-end-line="175" selection-end-column="25" />
+              <caret line="175" column="25" selection-start-line="175" selection-start-column="25" selection-end-line="175" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,11 +99,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1860" />
-    <option name="height" value="1099" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -108,9 +111,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -133,6 +135,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -181,10 +184,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1488" height="878" extended-state="6" />
+    <frame x="-7" y="-7" width="1488" height="878" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25350142" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2570028" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -278,7 +281,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="175" column="25" lean-forward="true" selection-start-line="175" selection-start-column="25" selection-end-line="175" selection-end-column="25" />
+          <caret line="175" column="25" selection-start-line="175" selection-start-column="25" selection-end-line="175" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
