@@ -14,13 +14,10 @@ public class MyTable extends JPanel {
         data = new Object[startCount][columnNames.length];
         String label = "Start Times";
         columnNames[0] = label;
-        //System.out.println(startCount);
         for (int i = 1; i < columnNames.length; i++) {
             columnNames[i] = "Core " + (i - 1);
         }
         for (int j = 0; j < startCount; j++) {
-            //System.out.println(j);
-            //System.out.println(startTimes[j]);
             data[j][0] = startTimes[j];
         }
         for (int m = 0; m < data.length; m++) {
