@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6668e83-c6d7-4e1c-aebd-e5feb76b7181" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Homework 3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Dijkstra.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Dijkstra.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Graph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/MyTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/MyTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/out/production/Homework 3/com/company/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 3/src/com/company/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/src/com/company/Dijkstra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 3/src/com/company/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/src/com/company/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 3/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 3/src/com/company/MyTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/src/com/company/MyTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 3/src/com/company/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 3/src/com/company/Node.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +15,7 @@
     <session id="-1778110747">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />

@@ -15,7 +15,7 @@ public class Main {
         Node nodeStart;
         Node nodeEnd;
         String stringWeight;
-        Node postnode;
+        Node postNode;
         double weight;
         Node start = new Node("Start");
         Graph graph = new Graph();
@@ -47,12 +47,12 @@ public class Main {
             start.addDestination(nodeStart, 0.0);
             for (int i = 2; i < input.length; i++) {
                 if (graph.containsNode(input[i] + " Start")) {
-                    postnode = graph.getNode(input[i] + " Start");
-                    nodeEnd.addDestination(postnode, 0.0);
+                    postNode = graph.getNode(input[i] + " Start");
+                    nodeEnd.addDestination(postNode, 0.0);
                 } else {
-                    postnode = new Node(input[i] + " Start");
-                    nodeEnd.addDestination(postnode, 0.0);
-                    graph.addNode(postnode);
+                    postNode = new Node(input[i] + " Start");
+                    nodeEnd.addDestination(postNode, 0.0);
+                    graph.addNode(postNode);
                 }
             }
 
